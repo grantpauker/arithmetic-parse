@@ -4,10 +4,11 @@
 #include "token.hpp"
 class NumberToken : public Token
 {
-  public:
-  NumberToken();
-    void Print();
-    std::string GetString();
-    void Parse();
+public:
+  NumberToken(int);
+  void Print();
+  std::string GetString();
+  void Parse();
+  int val;
 };
 #endif

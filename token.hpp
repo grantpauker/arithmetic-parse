@@ -7,6 +7,6 @@ class Token
     virtual void Print() = 0;
     virtual std::string GetString() = 0;
     virtual void Parse() = 0;
-    Token *GetToken(char);
+    static Token *GetToken(char);
 };
 #endif
