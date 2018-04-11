@@ -1,20 +1,23 @@
 #include "token.hpp"
 #include "tokenizer.hpp"
+#include "constants.hpp"
 #include <vector>
 #include <string>
+#include <iostream>
 int main()
 {
+    Constants constants();
+    std::string source = "123+34";
+    std::string::iterator it = source.begin();
     std::vector<Token *> tokens;
-    for (char c = '0'; c - '0' < 9; c++)
+    tokens.push_back(Token::GetToken(&it));
+    std::cout << *it << std::endl;
+    for (std::vector<Token *>::iterator it2 = tokens.begin(); it2 < tokens.end(); it2++)
     {
-        tokens.push_back(Token::GetToken(c));
-    }
-    for (std::vector<Token *>::iterator it = tokens.begin(); it < tokens.end(); it++)
-    {
-        (*it)->Print();
+        (*it2)->Print();
     }
     // std::string source = ;
-    Tokenizer t("d");
-    t.Tokenize();
+    // Tokenizer t("d");
+    // t.Tokenize();
     return 0;
 }
