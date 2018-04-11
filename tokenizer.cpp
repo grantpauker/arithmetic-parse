@@ -4,16 +4,28 @@
 Tokenizer::Tokenizer(std::string source) : source(source)
 {
 }
-Tokenizer::~Tokenizer(){
+Tokenizer::~Tokenizer()
+{
     tokens.~vector<Token *>();
 }
 
 std::vector<Token *> Tokenizer::Tokenize()
 {
-    source_iter = source.begin();
-    while (source_iter != source.end())
+    std::string::iterator it = source.begin();
+    while (it != source.end())
     {
-        std::cout << *source_iter << std::endl;
-        ++source_iter;
+        tokens.push_back(Token::GetToken(&it));
     }
+    return tokens;
+}
+void Tokenizer::Print()
+{
+    for (std::vector<Token *>::iterator it = tokens.begin(); it != tokens.end(); it++)
+    {
+        if ((*it) != NULL)
+        {
+            (*it)->Print();
+        }
+    }
+    return;
 }
