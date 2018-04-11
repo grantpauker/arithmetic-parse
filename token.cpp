@@ -15,4 +15,9 @@ Token *Token::GetToken(std::string::iterator *it)
         *it = tmp_it;
         return new NumberToken(std::stoi(tok_str));
     }
+    while (!isdigit(**it))
+    {
+        (*it)++;
+    }
+    return NULL;
 }
