@@ -8,9 +8,11 @@ class Tokenizer
 {
 public:
   Tokenizer(std::string);
-  ~Tokenizer(); 
+  ~Tokenizer();
   std::vector<Token *> Tokenize();
   std::vector<Token *> tokens;
+
+private:
   std::string source;
   std::string::iterator source_iter;
 };
