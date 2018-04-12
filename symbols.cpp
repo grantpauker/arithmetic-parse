@@ -1,8 +1,8 @@
-#include "constants.hpp"
+#include "symbols.hpp"
 #include <map>
-Constants::Constants()
+Symbols::Symbols()
 {
-    operator_kinds['+'] = Operators::MULT;
+    operator_kinds['*'] = Operators::MULT;
     operator_kinds['/'] = Operators::DIV;
     operator_kinds['%'] = Operators::MOD;
     operator_kinds['+'] = Operators::ADD;
@@ -19,4 +19,8 @@ Constants::Constants()
     operator_names[Operators::AND] = "&";
     operator_names[Operators::EXP] = "^";
     operator_names[Operators::OR] = "|";
+}
+bool Symbols::IsOperator(char c)
+{
+    return operator_kinds.find(c) != operator_kinds.end();
 }

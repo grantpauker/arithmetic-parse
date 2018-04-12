@@ -1,11 +1,11 @@
-#ifndef H_CONSTANTS
-#define H_CONSTANTS
+#ifndef H_SYMBOLS
+#define H_SYMBOLS
 #include <map>
 #include <string>
-class Constants
+class Symbols
 {
   public:
-    Constants();
+    Symbols();
     enum class Operators
     {
         MULT,
@@ -19,6 +19,6 @@ class Constants
     };
     std::map<char, Operators> operator_kinds;
     std::map<Operators, std::string> operator_names;
-  
+    bool IsOperator(char);
 };
 #endif
