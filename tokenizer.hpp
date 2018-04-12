@@ -1,8 +1,9 @@
 #ifndef H_TOKENIZER
 #define H_TOKENIZER
-#include "token.hpp"
-#include <vector>
 #include <string>
+#include <vector>
+#include "token.hpp"
+#include "symbols.hpp"
 
 class Tokenizer
 {
@@ -16,5 +17,6 @@ public:
 private:
   std::string source;
   std::string::iterator source_iter;
+  Symbols sym;
 };
 #endif

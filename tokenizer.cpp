@@ -1,14 +1,15 @@
 
 #include "tokenizer.hpp"
+#include "symbols.hpp"
 #include <iostream>
 Tokenizer::Tokenizer(std::string source) : source(source)
 {
+    sym = Symbols();
 }
 Tokenizer::~Tokenizer()
 {
     tokens.~vector<Token *>();
 }
-
 std::vector<Token *> Tokenizer::Tokenize()
 {
     std::string::iterator it = source.begin();
