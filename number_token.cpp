@@ -5,12 +5,12 @@ NumberToken::NumberToken(int val) : val(val)
 }
 void NumberToken::Print()
 {
-    std::cout << "KIND: int, VAL: " << val << std::endl;
+    std::cout << "Int: " << val << std::endl;
     return;
 }
 std::string NumberToken::GetString()
 {
-    return "hello world";
+    return std::to_string(val);
 }
 void NumberToken::Parse()
 {
