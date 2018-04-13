@@ -1,12 +1,12 @@
 #include "token.hpp"
 #include "tokenizer.hpp"
-#include "constants.hpp"
+#include "symbols.hpp"
 #include <vector>
 #include <string>
 #include <iostream>
 int main()
 {
-    Tokenizer t("123+34sdasdasd2312314fmds-2");
+    Tokenizer t("12+34/56%7&89");
     t.Tokenize();
     t.Print();
     return 0;
