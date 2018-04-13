@@ -4,7 +4,6 @@
 #include <iostream>
 Tokenizer::Tokenizer(std::string source) : source(source)
 {
-    sym = Symbols();
 }
 Tokenizer::~Tokenizer()
 {
@@ -21,6 +20,7 @@ std::vector<Token *> Tokenizer::Tokenize()
 }
 void Tokenizer::Print()
 {
+
     for (std::vector<Token *>::iterator it = tokens.begin(); it != tokens.end(); it++)
     {
         if ((*it) != NULL)

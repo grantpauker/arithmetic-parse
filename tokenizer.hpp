@@ -17,6 +17,5 @@ public:
 private:
   std::string source;
   std::string::iterator source_iter;
-  Symbols sym;
 };
 #endif
