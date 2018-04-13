@@ -1,17 +1,7 @@
 #ifndef H_TOKEN
 #define H_TOKEN
 #include <string>
- enum class Operators
-{
-  MULT,
-  DIV,
-  MOD,
-  ADD,
-  SUB,
-  AND,
-  EXP,
-  OR,
-};
+
 class Token
 {
 public:
