@@ -1,10 +1,8 @@
 #include <iostream>
 #include <string>
 #include "operator_token.hpp"
-// const std::map<Operators, std::string> operator_names;
-OperatorToken::OperatorToken(Operators val) : val(val)
-{
-}
+OperatorToken::OperatorToken(Operator val) : val(val){}
+
 void OperatorToken::Print()
 {
     std::cout << "Operator: " << operator_names.at(val) << std::endl;
