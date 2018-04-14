@@ -1,16 +1,22 @@
 .PHONY: clean
 CC=g++
 CXXFLAGS= -std=c++17
+SRCDIR=src
+OBJDIR=obj
+SRCFILES:=$(wildcard $(SRCDIR)/*.cpp)
+OBJFILES:=$(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o, $(SRCFILES))
+all: $(OBJFILES)
+	$(CC) $(CXXFLAGS) *.cpp  $(SRCFILES)
+	
 
-all: *.o
-	$(CC) $(CXXFLAGS) *.cpp
-%.o: %.cpp
-	$(CC) $(CXXFLAGS) -c $^
+$(OBJDIR)/%.o: $(SRCDIR)/%.cpp
+	$(CC) $(CXXFLAGS) -c $^ -o $@
 
 debug: CXXFLAGS += -g
-debug: all
+debug: all 
+test:
+	@echo $(SRCFILES)
 
 clean: 
-	-rm *.o
-	-rm *.gch
-	-rm a.out 
+	-rm -f $(OBJDIR)/*.o
+	-rm -f a.out 
