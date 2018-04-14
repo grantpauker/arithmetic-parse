@@ -3,19 +3,17 @@ CC=g++
 CXXFLAGS= -std=c++17
 SRCDIR=src
 OBJDIR=obj
-SRCFILES:=$(wildcard $(SRCDIR)/*.cpp)
-OBJFILES:=$(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o, $(SRCFILES))
-all: $(OBJFILES)
-	$(CC) $(CXXFLAGS) *.cpp  $(SRCFILES)
-	
+SOURCES:=$(wildcard $(SRCDIR)/*.cpp)
+OBJECTS:=$(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o, $(SOURCES))
+
+all: $(OBJECTS)
+	$(CC) $(CXXFLAGS) *.cpp  $(SOURCES)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 	$(CC) $(CXXFLAGS) -c $^ -o $@
 
 debug: CXXFLAGS += -g
 debug: all 
-test:
-	@echo $(SRCFILES)
 
 clean: 
 	-rm -f $(OBJDIR)/*.o
