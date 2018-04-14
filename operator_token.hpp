@@ -6,10 +6,10 @@
 class OperatorToken : public Token
 {
 public:
-  OperatorToken(Operators);
+  OperatorToken(Operator);
   void Print();
   std::string GetString();
   void Parse();
-  Operators val;
+  Operator val;
 };
 #endif
