@@ -12,7 +12,6 @@ public:
   ~Tokenizer();
   std::vector<Token *> Tokenize();
   std::vector<Token *> tokens;
-  void Print();
 
 private:
   std::string source;

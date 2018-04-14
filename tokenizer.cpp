@@ -18,15 +18,3 @@ std::vector<Token *> Tokenizer::Tokenize()
     }
     return tokens;
 }
-void Tokenizer::Print()
-{
-
-    for (std::vector<Token *>::iterator it = tokens.begin(); it != tokens.end(); it++)
-    {
-        if ((*it) != NULL)
-        {
-            (*it)->Print();
-        }
-    }
-    return;
-}
