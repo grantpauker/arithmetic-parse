@@ -2,7 +2,7 @@
 #define H_SYMBOLS
 #include <map>
 #include <string>
-enum class Operators
+enum class Operator
 {
     MULT,
     DIV,
@@ -13,8 +13,8 @@ enum class Operators
     EXP,
     OR,
 };
-const extern std::map<char, Operators> operator_kinds;
-const extern std::map<Operators, std::string> operator_names;
+const extern std::map<std::string, Operator> operator_kinds;
+const extern std::map<Operator, std::string> operator_names;
 
-bool IsOperator(char);
+bool IsOperator(std::string);
 #endif

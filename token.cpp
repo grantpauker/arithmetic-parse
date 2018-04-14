@@ -3,6 +3,7 @@
 #include "number_token.hpp"
 #include "operator_token.hpp"
 #include "symbols.hpp"
+
 Token *Token::GetToken(std::string::iterator *it)
 {
     std::string::iterator tmp_it = *it;
@@ -17,15 +18,16 @@ Token *Token::GetToken(std::string::iterator *it)
         *it = tmp_it;
         return new NumberToken(std::stoi(tok_str));
     }
-    else if (IsOperator(*tmp_it))
+    else if (IsOperator(std::string(tmp_it, std::next(tmp_it, 1))))
     {
         tmp_it++;
         tok_str = std::string(*it, tmp_it);
         *it = tmp_it;
-        return new OperatorToken(operator_kinds.at(tok_str.c_str()[0]));
+        return new OperatorToken(operator_kinds.at(tok_str));
     }
-    while (!isdigit(**it))
+    while (!isdigit(**it) && !IsOperator(std::string(*it, std::next(*it, 1))))
     {
         (*it)++;
     }
+    return NULL;
 }

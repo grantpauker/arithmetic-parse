@@ -1,28 +1,29 @@
 #include <map>
+#include <string>
 #include "symbols.hpp"
-const extern std::map<char, Operators> operator_kinds = {
-    {'*', Operators::MULT},
-    {'/', Operators::DIV},
-    {'%', Operators::MOD},
-    {'+', Operators::ADD},
-    {'-', Operators::SUB},
-    {'&', Operators::AND},
-    {'^', Operators::EXP},
-    {'|', Operators::OR},
+const extern std::map<std::string, Operator> operator_kinds = {
+    {"*", Operator::MULT},
+    {"/", Operator::DIV},
+    {"%", Operator::MOD},
+    {"+", Operator::ADD},
+    {"-", Operator::SUB},
+    {"&", Operator::AND},
+    {"^", Operator::EXP},
+    {"|", Operator::OR},
 };
 
-const extern std::map<Operators, std::string> operator_names =
+const extern std::map<Operator, std::string> operator_names =
     {
-        {Operators::MULT, "+"},
-        {Operators::DIV, "/"},
-        {Operators::MOD, "%"},
-        {Operators::ADD, "+"},
-        {Operators::SUB, "-"},
-        {Operators::AND, "&"},
-        {Operators::EXP, "^"},
-        {Operators::OR, "|"},
+        {Operator::MULT, "+"},
+        {Operator::DIV, "/"},
+        {Operator::MOD, "%"},
+        {Operator::ADD, "+"},
+        {Operator::SUB, "-"},
+        {Operator::AND, "&"},
+        {Operator::EXP, "^"},
+        {Operator::OR, "|"},
 };
-bool IsOperator(char c)
+bool IsOperator(std::string c)
 {
     return operator_kinds.find(c) != operator_kinds.end();
 }
