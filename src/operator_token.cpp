@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "operator_token.hpp"
+#include "../include/operator_token.hpp"
 OperatorToken::OperatorToken(Operator val) : val(val){}
 
 void OperatorToken::Print()

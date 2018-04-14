@@ -2,11 +2,11 @@
 #include <string>
 #include <iostream>
 #include <signal.h>
-#include "token.hpp"
-#include "tokenizer.hpp"
-#include "symbols.hpp"
-#include "token_handler.hpp"
-#include "shunting_yard.hpp"
+#include "include/token.hpp"
+#include "include/tokenizer.hpp"
+#include "include/symbols.hpp"
+#include "include/token_handler.hpp"
+#include "include/shunting_yard.hpp"
 
 int main()
 {

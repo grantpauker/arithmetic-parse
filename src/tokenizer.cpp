@@ -1,7 +1,7 @@
 
-#include "tokenizer.hpp"
-#include "symbols.hpp"
 #include <iostream>
+#include "../include/tokenizer.hpp"
+#include "../include/symbols.hpp"
 Tokenizer::Tokenizer(std::string source) : source(source)
 {
 }

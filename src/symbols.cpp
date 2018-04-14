@@ -1,6 +1,6 @@
 #include <map>
 #include <string>
-#include "symbols.hpp"
+#include "../include/symbols.hpp"
 const extern std::map<std::string, Operator> operator_kinds = {
     {"*", Operator::MULT},
     {"/", Operator::DIV},

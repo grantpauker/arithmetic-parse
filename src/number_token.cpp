@@ -1,5 +1,5 @@
-#include "number_token.hpp"
 #include <iostream>
+#include "../include/number_token.hpp"
 NumberToken::NumberToken(int val) : val(val)
 {
 }

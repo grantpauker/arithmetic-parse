@@ -1,8 +1,8 @@
 #include <iostream>
-#include "token.hpp"
-#include "number_token.hpp"
-#include "operator_token.hpp"
-#include "symbols.hpp"
+#include "../include/token.hpp"
+#include "../include/number_token.hpp"
+#include "../include/operator_token.hpp"
+#include "../include/symbols.hpp"
 
 Token *Token::GetToken(std::string::iterator *it)
 {
