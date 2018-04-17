@@ -10,6 +10,6 @@ public:
 
 private:
   std::vector<Token *> tokens;
-  std::vector<Token *> parsed;
+  std::vector<Token *> output;
 };
 #endif
