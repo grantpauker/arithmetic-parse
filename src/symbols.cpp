@@ -14,7 +14,7 @@ const extern std::map<std::string, Operator> operator_kinds = {
 
 const extern std::map<Operator, std::string> operator_names =
     {
-        {Operator::MULT, "+"},
+        {Operator::MULT, "*"},
         {Operator::DIV, "/"},
         {Operator::MOD, "%"},
         {Operator::ADD, "+"},
