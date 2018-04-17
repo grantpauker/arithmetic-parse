@@ -16,3 +16,7 @@ void NumberToken::Parse()
 {
     return;
 }
+TokenKind NumberToken::GetKind(void)
+{
+    return TokenKind::INT;
+}

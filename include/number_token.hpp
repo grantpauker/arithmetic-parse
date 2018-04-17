@@ -2,6 +2,7 @@
 #define H_NUMBER_TOKEN
 #include <string>
 #include "token.hpp"
+#include "symbols.hpp"
 class NumberToken : public Token
 {
 public:
@@ -9,6 +10,8 @@ public:
   void Print();
   std::string GetString();
   void Parse();
+  TokenKind GetKind(void);
+  
   int val;
 };
 #endif

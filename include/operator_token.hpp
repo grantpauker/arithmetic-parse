@@ -10,6 +10,8 @@ public:
   void Print();
   std::string GetString();
   void Parse();
+  TokenKind GetKind(void);
+
   Operator val;
 };
 #endif

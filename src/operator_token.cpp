@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "../include/operator_token.hpp"
-OperatorToken::OperatorToken(Operator val) : val(val){}
+OperatorToken::OperatorToken(Operator val) : val(val) {}
 
 void OperatorToken::Print()
 {
@@ -15,4 +15,8 @@ std::string OperatorToken::GetString()
 void OperatorToken::Parse()
 {
     return;
+}
+TokenKind OperatorToken::GetKind(void)
+{
+    return TokenKind::OPERATOR;
 }
