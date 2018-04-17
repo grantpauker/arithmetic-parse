@@ -13,6 +13,11 @@ enum class Operator
     EXP,
     OR,
 };
+enum class TokenKind
+{
+    INT,
+    OPERATOR,
+};
 const extern std::map<std::string, Operator> operator_kinds;
 const extern std::map<Operator, std::string> operator_names;
 
