@@ -2,7 +2,6 @@
 #include "../include/symbols.hpp"
 #include "../include/shunting_yard.hpp"
 #include "../include/operator_token.hpp"
-
 ShuntingYard::ShuntingYard(std::vector<Token *> tokens) : tokens(tokens) {}
 std::vector<Token *> ShuntingYard::Parse()
 {
@@ -15,7 +14,7 @@ std::vector<Token *> ShuntingYard::Parse()
             {
                 output.push_back(*it);
             }
-            if ((*it)->GetKind() == TokenKind::OPERATOR)
+            else if ((*it)->GetKind() == TokenKind::OPERATOR)
             {
                 std::vector<Token *>::iterator it2 = stack.begin();
                 while (it2 != stack.end() && (int)dynamic_cast<OperatorToken *>(*it)->val >= (int)dynamic_cast<OperatorToken *>(*it2)->val)
