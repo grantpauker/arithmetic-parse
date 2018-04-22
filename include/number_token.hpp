@@ -7,7 +7,7 @@ class NumberToken : public Token
 {
 public:
   NumberToken(int);
-  void Print();
+  void Print(std::ostream&) const;
   std::string GetString();
   void Parse();
   TokenKind GetKind(void);

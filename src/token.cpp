@@ -31,3 +31,13 @@ Token *Token::GetToken(std::string::iterator *it)
     }
     return NULL;
 }
+std::ostream &operator<<(std::ostream &os, Token *tok)
+{
+    os << tok->GetString();
+    return os;
+}
+std::ostream &operator<<(std::ostream &os, Token &tok)
+{
+    os << tok.GetString();
+    return os;
+}

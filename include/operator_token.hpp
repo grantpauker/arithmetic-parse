@@ -7,7 +7,7 @@ class OperatorToken : public Token
 {
 public:
   OperatorToken(Operator);
-  void Print();
+  void Print(std::ostream&) const;
   std::string GetString();
   void Parse();
   TokenKind GetKind(void);

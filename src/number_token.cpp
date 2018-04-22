@@ -3,9 +3,9 @@
 NumberToken::NumberToken(int val) : val(val)
 {
 }
-void NumberToken::Print()
+void NumberToken::Print(std::ostream &os) const
 {
-    std::cout << "Int: " << val << std::endl;
+    os << val;
     return;
 }
 std::string NumberToken::GetString()

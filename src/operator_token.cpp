@@ -3,9 +3,9 @@
 #include "../include/operator_token.hpp"
 OperatorToken::OperatorToken(Operator val) : val(val) {}
 
-void OperatorToken::Print()
+void OperatorToken::Print(std::ostream &os) const
 {
-    std::cout << "Operator: " << operator_names.at(val) << std::endl;
+    os << operator_names.at(val);
     return;
 }
 std::string OperatorToken::GetString()

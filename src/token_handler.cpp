@@ -7,7 +7,7 @@ void TokenHandler::Print()
     {
         if ((*it) != NULL)
         {
-            (*it)->Print();
+            std::cout << *it;
         }
     }
     return;
